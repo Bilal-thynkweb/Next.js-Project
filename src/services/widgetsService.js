@@ -1,10 +1,10 @@
 export async function getAllRecords() {
-  const res = await fetch(`http://localhost:3000/api/records`);
+  const res = await fetch(`/api/records`);
   return res.json();
 }
 
 export async function updateRecord(body) {
-  const res = await fetch(`http://localhost:3000/api/records`, {
+  const res = await fetch(`/api/records`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export async function updateRecord(body) {
 }
 
 export async function addRecord(body) {
-  const res = await fetch(`http://localhost:3000/api/records`, {
+  const res = await fetch(`/api/records`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export async function addRecord(body) {
 }
 
 export async function deleteRecord(id) {
-  const res = await fetch(`http://localhost:3000/api/records?id=${id}`, {
+  const res = await fetch(`/api/records?id=${id}`, {
     method: "DELETE",
   });
   return res.json();
