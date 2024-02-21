@@ -166,7 +166,14 @@ export default function Main({
         );
       }
       return (
-        <div key={i} className={""} style={{ border: "1px solid black" }}>
+        <div
+          key={i}
+          className={""}
+          style={{
+            border: "1px solid black",
+            overflow: i === 0 ? "auto" : "",
+          }}
+        >
           <div className="">{render}</div>
         </div>
       );
